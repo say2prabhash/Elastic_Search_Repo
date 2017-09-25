@@ -31,6 +31,7 @@ namespace ElasticSearch
         public void LogSessionId()
         {
             log.SessionId = "Session-" + sessionNum.ToString();
+            sessionNum++;
         }
         public void LogResponseTime()
         {
