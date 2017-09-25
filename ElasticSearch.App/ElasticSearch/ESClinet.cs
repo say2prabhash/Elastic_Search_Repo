@@ -18,7 +18,7 @@ namespace ElasticSearch
             StaticConnectionPool connectionPool;
             var nodes = new Uri[]
             {
-                new Uri("http://localhost:9200/")
+                new Uri("http://172.16.14.90:9200/")
             };
 
             connectionPool = new StaticConnectionPool(nodes);

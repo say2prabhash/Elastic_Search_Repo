@@ -13,7 +13,7 @@ namespace UnitTestProject1
         {
             Operations operation = new Operations();
             SampleData data = new SampleData();
-            data.Id = "100";
+            data.Id = "103";
             data.Name = "Prabhash";
             Assert.IsTrue(operation.Index(data));
 
@@ -22,8 +22,8 @@ namespace UnitTestProject1
         public void Searching_data()
         {
             Operations operation = new Operations();
-            List<SampleData> list = operation.SearchData("Prabhash");
-            Assert.Equals(1, list.Count);
+            List<SampleData> list = operation.SearchData("100");
+            Assert.AreEqual(1, list.Count);
         }
         [TestMethod]
         public void Deleting_data()

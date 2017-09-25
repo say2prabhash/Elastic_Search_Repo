@@ -51,6 +51,8 @@
   <ItemGroup>
     <Compile Include="Constants.cs" />
     <Compile Include="ESClinet.cs" />
+    <Compile Include="Log.cs" />
+    <Compile Include="LogEntry.cs" />
     <Compile Include="Operations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SampleData.cs" />
