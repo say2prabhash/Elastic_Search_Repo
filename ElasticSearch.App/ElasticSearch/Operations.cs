@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace ElasticSearch
 {
@@ -24,7 +25,11 @@ namespace ElasticSearch
                   .Type("entry")
                   .Id(data.Id)
                   .Refresh(Elasticsearch.Net.Refresh.True));
-            return true;
+            if (response != null)
+            {
+                return true;
+            }
+            return false;
         }
         public List<SampleData> SearchData(string searchID)
         {
@@ -32,17 +37,26 @@ namespace ElasticSearch
             var response = EsClient.InitailizeElasticClient().Search<SampleData>(s => s
             .Index("blog")
             .Type("entry")
-            .Query(q => q.Term(t => t.Field("_id").Value(searchID))));               
+            .Query(q => q.Match(t => t.Field("name").Query(searchID))));
 
             foreach (var hit in response.Hits)
             {
                 var data = new SampleData();
-                data.Id= hit.Id.ToString();
+                data.Id = hit.Id.ToString();
                 data.Name = hit.Source.Name.ToString();
                 dataList.Add(data);
             }
             return dataList;
         }
+        public bool DeleteData(string index)
+        {
 
+            var respnse = EsClient.InitailizeElasticClient().DeleteIndex(index);
+            if (respnse != null)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }
