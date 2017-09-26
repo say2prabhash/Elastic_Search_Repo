@@ -49,7 +49,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Constants.cs" />
     <Compile Include="ESClinet.cs" />
     <Compile Include="Log.cs" />
     <Compile Include="LogEntry.cs" />

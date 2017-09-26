@@ -33,6 +33,7 @@ namespace ElasticSearch
                 log.LogStatus("Sucessfull");
                 log.LogIpAddress();
                 log.LogDataIntoFile();
+                log.LogDataIntoIndex();
                 return true;
             }
             log.LogResponseTime();
@@ -42,6 +43,7 @@ namespace ElasticSearch
             log.LogStatus("Failed");
             log.LogIpAddress();
             log.LogDataIntoFile();
+            log.LogDataIntoIndex();
             return false;
         }
 
@@ -70,6 +72,7 @@ namespace ElasticSearch
                 log.LogStatus("Sucessfull");
                 log.LogIpAddress();
                 log.LogDataIntoFile();
+                log.LogDataIntoIndex();
             }
             log.LogResponseTime();
             log.LogResponse(response.ToString());
@@ -78,6 +81,7 @@ namespace ElasticSearch
             log.LogStatus("Failed");
             log.LogIpAddress();
             log.LogDataIntoFile();
+            log.LogDataIntoIndex();
             return dataList;
         }
         public bool DeleteData(string index)
@@ -94,6 +98,7 @@ namespace ElasticSearch
                 log.LogStatus("Sucessfull");
                 log.LogIpAddress();
                 log.LogDataIntoFile();
+                log.LogDataIntoIndex();
                 return true;
             }
             log.LogResponseTime();
@@ -103,6 +108,7 @@ namespace ElasticSearch
             log.LogStatus("Failed");
             log.LogIpAddress();
             log.LogDataIntoFile();
+            log.LogDataIntoIndex();
             return false;
         }
     }

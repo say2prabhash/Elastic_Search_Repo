@@ -52,5 +52,9 @@ namespace ElasticSearch
                 + "Response Time: " + log.ResponseTime + Environment.NewLine + "Status: " + log.Status + Environment.NewLine + "Response: " + log.Response + Environment.NewLine+Environment.NewLine;
             File.AppendAllText("D:\\Elastic_Search_Repo\\ElasticSearch.App\\LogFile.txt", logData);
         }
+        public void LogDataIntoIndex()
+        {
+            EsClient.InitailizeElasticClient().Index<Log>(log, x => x.Index("index").Type("log").Refresh(Elasticsearch.Net.Refresh.True));
+        }
     }
 }
