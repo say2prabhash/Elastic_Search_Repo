@@ -1,0 +1,32 @@
+Session Id: Session-1
+Response Time: 25-09-2017 15:21:02
+IP Address: 172.16.14.90
+Request Type: SearchData(100)
+Response Time: 25-09-2017 15:21:02
+Status: Sucessfull
+Response: Valid NEST response built from a successful low level call on POST: /blog/entry/_search
+
+Session Id: Session-1
+Response Time: 25-09-2017 15:21:02
+IP Address: 172.16.14.90
+Request Type: SearchData(100)
+Response Time: 25-09-2017 15:21:02
+Status: Failed
+Response: Valid NEST response built from a successful low level call on POST: /blog/entry/_search
+
+Session Id: Session-1
+Response Time: 26-09-2017 09:52:12
+IP Address: 172.16.14.90
+Request Type: SearchData(100)
+Response Time: 26-09-2017 09:52:12
+Status: Sucessfull
+Response: Valid NEST response built from a successful low level call on POST: /blog/entry/_search
+
+Session Id: Session-2
+Response Time: 26-09-2017 09:52:12
+IP Address: 172.16.14.90
+Request Type: SearchData(100)
+Response Time: 26-09-2017 09:52:12
+Status: Failed
+Response: Valid NEST response built from a successful low level call on POST: /blog/entry/_search
+
